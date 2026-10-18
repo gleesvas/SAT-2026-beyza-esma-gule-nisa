@@ -1,0 +1,46 @@
+extends CharacterBody2D
+
+@export var karakter_hizi = 200.0
+@export var ziplama_gucu = -400.0
+@onready var sprite = $AnimatedSprite2D
+
+func benim_fonksiyonum():
+	print(3+5)
+	pass
+
+func _ready():
+	pass
+
+func _process(delta: float) -> void:
+	pass
+
+func _physics_process(delta: float) -> void:
+	# Yer çekimi ekleme (Yerde değilse aşağı çeker)
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Zıplama kontrolü (Yukarı ok tuşu)
+	if Input.is_action_just_pressed("ui_up") and is_on_floor():
+		velocity.y = ziplama_gucu
+
+	# Sağa ve Sola Hareket (Ok tuşları)
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = karakter_hizi
+		sprite.flip_h = false
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = -karakter_hizi
+		sprite.flip_h = true
+	else:
+		velocity.x = 0
+		sprite.flip_h = false # Durduğu an yüzünü öne döndürür
+
+	# Hareket durumuna göre animasyon kontrolü
+	if velocity.x != 0:
+		if sprite.animation != "yurume":
+			sprite.play("yurume")
+	else:
+		if sprite.animation != "idle":
+			sprite.play("idle") # Sadece idle oynamıyorsa 1 kez başlatır
+
+	move_and_slide()
+	print(position)
