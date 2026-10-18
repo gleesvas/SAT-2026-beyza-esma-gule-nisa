@@ -59,14 +59,14 @@ script = ExtResource("2_jqplm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372382168]
 texture_filter = 1
-position = Vector2(1, -3)
+position = Vector2(252, 118)
 shape = SubResource("RectangleShape2D_s4hye")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=3506338]
 libraries/ = SubResource("AnimationLibrary_fvdbd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2079751859]
-position = Vector2(1, -3)
+position = Vector2(251, 118)
 sprite_frames = SubResource("SpriteFrames_s4hye")
 animation = &"idle"
 autoplay = "idle"
