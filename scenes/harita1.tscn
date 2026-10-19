@@ -7451,6 +7451,3 @@ tile_set = SubResource("TileSet_jqplm")
 
 [node name="Shadow" parent="." unique_id=1379353057 instance=ExtResource("211_sukl7")]
 position = Vector2(27, 60)
-
-[node name="Camera2D" type="Camera2D" parent="Shadow" unique_id=400942734]
-position = Vector2(1, 0)
