@@ -1,72 +1,19 @@
 [gd_scene format=3 uid="uid://cc1dlmxuwpvhp"]
 
+[ext_resource type="Texture2D" uid="uid://c7yedqp3fwshw" path="res://Shadow.png" id="1_6pqxc"]
 [ext_resource type="Script" uid="uid://d8xoqylcp1of" path="res://scenes/collision_shape_2d.gd" id="2_jqplm"]
-[ext_resource type="Texture2D" uid="uid://coqukbp5yt714" path="res://karakterler.png" id="3_bs2fw"]
-[ext_resource type="Texture2D" uid="uid://c5djae1y2qcel" path="res://yan yürümeş.png" id="4_fvdbd"]
-[ext_resource type="Texture2D" uid="uid://biudjyydtyjx7" path="res://yan.png" id="5_arb4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4hye"]
-size = Vector2(30, 32)
-
-[sub_resource type="Animation" id="Animation_jqplm"]
-resource_name = "new_animation"
-
-[sub_resource type="Animation" id="Animation_bs2fw"]
-resource_name = "ıdle"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvdbd"]
-_data = {
-&"new_animation": SubResource("Animation_jqplm"),
-&"ıdle": SubResource("Animation_bs2fw")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tkqwg"]
-atlas = ExtResource("3_bs2fw")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kimjs"]
-atlas = ExtResource("4_fvdbd")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_piu8t"]
-atlas = ExtResource("5_arb4i")
-region = Rect2(0, 0, 30, 30)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_s4hye"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tkqwg")
-}],
-"loop": 2,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kimjs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_piu8t")
-}],
-"loop": 1,
-"name": &"yurume",
-"speed": 5.0
-}]
+size = Vector2(30.4375, 34.875)
 
 [node name="Shadow" type="CharacterBody2D" unique_id=1379353057]
 script = ExtResource("2_jqplm")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=955944503]
+position = Vector2(157, 49)
+scale = Vector2(-0.896, 1)
+texture = ExtResource("1_6pqxc")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372382168]
-texture_filter = 1
-position = Vector2(1, -3)
+position = Vector2(156.78125, 50.5625)
 shape = SubResource("RectangleShape2D_s4hye")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=3506338]
-libraries/ = SubResource("AnimationLibrary_fvdbd")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2079751859]
-position = Vector2(1, -3)
-sprite_frames = SubResource("SpriteFrames_s4hye")
-animation = &"idle"
-autoplay = "idle"
