@@ -51,6 +51,7 @@ animations = [{
 [node name="Light" type="CharacterBody2D" unique_id=252052183]
 position = Vector2(-24, -30)
 script = ExtResource("1_esukd")
+ziplama_gucu = -50.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=194826386]
 libraries/ = SubResource("AnimationLibrary_ng3tf")

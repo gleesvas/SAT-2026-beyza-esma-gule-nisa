@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://biyqv4asxixng"]
+
+[ext_resource type="Texture2D" uid="uid://bmjp41d8s211" path="res://scenes/karakter_animasyon.png" id="2_2e2gu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ky1i4"]
+atlas = ExtResource("2_2e2gu")
+region = Rect2(0, 0, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr6e6"]
+atlas = ExtResource("2_2e2gu")
+region = Rect2(45, 0, 45, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaxgo"]
+atlas = ExtResource("2_2e2gu")
+region = Rect2(90, 0, 45, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_light"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ky1i4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gr6e6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaxgo")
+}],
+"loop": 1,
+"name": &"yurume",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="Rect_body"]
+size = Vector2(23, 38)
+
+[node name="Light" type="CharacterBody2D" unique_id=412803545]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1939720696]
+texture_filter = 1
+position = Vector2(-0.25, -4.5)
+scale = Vector2(1.0111111, 0.98)
+sprite_frames = SubResource("SpriteFrames_light")
+animation = &"yurume"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587791480]
+position = Vector2(-1.5, -3)
+shape = SubResource("Rect_body")

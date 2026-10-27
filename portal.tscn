@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://c28j4nimnpokd"]
+
+[ext_resource type="Texture2D" uid="uid://c3ak632ma1a58" path="res://portal-Sheet (1).png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://4g8sl84bvd7j" path="res://portal.gd" id="1_ef3v5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef3v5"]
+atlas = ExtResource("1_0r486")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grrij"]
+atlas = ExtResource("1_0r486")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r214"]
+atlas = ExtResource("1_0r486")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pgh4"]
+atlas = ExtResource("1_0r486")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtc1a"]
+atlas = ExtResource("1_0r486")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8rct"]
+atlas = ExtResource("1_0r486")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8kna"]
+atlas = ExtResource("1_0r486")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a7dg"]
+atlas = ExtResource("1_0r486")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qirbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef3v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grrij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r214")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pgh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtc1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8rct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8kna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a7dg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o0c6j"]
+radius = 20.518284
+
+[node name="Portal" type="Area2D" unique_id=665749149]
+z_index = 1
+script = ExtResource("1_ef3v5")
+next_scene_path = "uid://dof3orjw8pex1"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=583291836]
+position = Vector2(3, -1)
+scale = Vector2(1, 0.96875)
+sprite_frames = SubResource("SpriteFrames_qirbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1312376437]
+shape = SubResource("CircleShape2D_o0c6j")
