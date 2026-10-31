@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://83nd1488304w"]
+
+[ext_resource type="Script" uid="uid://cixwpskcgi22g" path="res://asansor.gd" id="1_7816w"]
+[ext_resource type="Texture2D" uid="uid://2l43pv2tooam" path="res://asansorr.png" id="2_7816w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qirbi"]
+size = Vector2(48, 16)
+
+[node name="Asansor" type="AnimatableBody2D" unique_id=1938578459]
+z_index = 1
+script = ExtResource("1_7816w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1415331919]
+texture = ExtResource("2_7816w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1011139615]
+shape = SubResource("RectangleShape2D_qirbi")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlysh7optgx85"
-path="res://.godot/imported/sartelyukari.png-1466374614f2cc88beb3cb7b0c0ee952.ctex"
+uid="uid://cq4wy22b2wjrd"
+path="res://.godot/imported/isikkisa.png-f34f26bd41e6d4c7f76f10db35ad6d0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sartelyukari.png"
-dest_files=["res://.godot/imported/sartelyukari.png-1466374614f2cc88beb3cb7b0c0ee952.ctex"]
+source_file="res://isikkisa.png"
+dest_files=["res://.godot/imported/isikkisa.png-f34f26bd41e6d4c7f76f10db35ad6d0d.ctex"]
 
 [params]
 

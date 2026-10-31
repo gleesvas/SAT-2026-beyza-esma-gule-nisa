@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c3mbikcc8rfuf"]
+
+[ext_resource type="Script" uid="uid://cixwpskcgi22g" path="res://asansor.gd" id="1_ccwxe"]
+[ext_resource type="Texture2D" uid="uid://dx46yjfbjcdcw" path="res://kapiyan.png" id="1_xu7ye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qirbi"]
+size = Vector2(64, 16)
+
+[node name="kapiyan" type="AnimatableBody2D" unique_id=487847602]
+script = ExtResource("1_ccwxe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=747252163]
+position = Vector2(-2.9999993, -1.0000002)
+scale = Vector2(1.3333333, 1.3333333)
+texture = ExtResource("1_xu7ye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=14824749]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_qirbi")

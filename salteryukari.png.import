@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7x01ane86mkj"
-path="res://.godot/imported/sartelsol.png-5d7e43c1d18fab12f3d0f9b3fb991776.ctex"
+uid="uid://dbcgknvjtgmcl"
+path="res://.godot/imported/salteryukari.png-522e885759f9ad8aab0706480b8d07e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sartelsol.png"
-dest_files=["res://.godot/imported/sartelsol.png-5d7e43c1d18fab12f3d0f9b3fb991776.ctex"]
+source_file="res://salteryukari.png"
+dest_files=["res://.godot/imported/salteryukari.png-522e885759f9ad8aab0706480b8d07e5.ctex"]
 
 [params]
 

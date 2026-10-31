@@ -31,3 +31,8 @@ func _on_cikis_butonu_pressed() -> void:
 
 func _on_duraklat_butonu_mouse_entered() -> void:
 	pass # Replace with function body.
+
+
+func _on_yeniden_basla_butonu_pressed() -> void:
+	get_tree().paused = false  # Oyun duraklatılmışsa dondurmayı kaldırır
+	get_tree().reload_current_scene()  # O an açık olan haritayı sıfırdan yeniden yükler

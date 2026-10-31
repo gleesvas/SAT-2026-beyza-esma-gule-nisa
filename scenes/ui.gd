@@ -33,3 +33,8 @@ func _on_ana_menu_pressed() -> void:
 
 func _on_cikis_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_yeniden_basla_butonu_pressed() -> void:
+	get_tree().paused = false  # Oyun duraklatılmışsa dondurmayı kaldırır
+	get_tree().reload_current_scene()  # O an açık olan haritayı sıfırdan yeniden yükler

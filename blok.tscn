@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bds5oepjce5u1"]
+
+[ext_resource type="Texture2D" uid="uid://bpe1sdp7ji2jq" path="res://blok.png" id="1_imtn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qirbi"]
+size = Vector2(34, 33)
+
+[node name="Blok" type="RigidBody2D" unique_id=2037692327]
+can_sleep = false
+lock_rotation = true
+continuous_cd = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=909880102]
+position = Vector2(1, 1.5)
+scale = Vector2(0.9444444, 0.9166667)
+texture = ExtResource("1_imtn6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=947203850]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_qirbi")

@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://b46tn7v4p3ona"]
+
+[ext_resource type="Script" uid="uid://dqu4k0db1n6up" path="res://scenes/anamenuu.gd" id="1_5kivf"]
+[ext_resource type="Texture2D" uid="uid://bxtnhapteqx46" path="res://uzayarkaplan.jpeg" id="2_5kivf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kivf"]
+bg_color = Color(0.08235294, 0.08235294, 0.18431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osdsj"]
+bg_color = Color(0.003921569, 0.07450981, 0.17254902, 0.9764706)
+
+[node name="anamenuu" type="Control" unique_id=2065927231]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5kivf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=788440952]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5kivf")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1575744736]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="oynabuton" type="Button" parent="VBoxContainer" unique_id=531013745]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "OYNA"
+
+[node name="ayarlarbuton" type="Button" parent="VBoxContainer" unique_id=1917077590]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "AYARLAR
+"
+
+[node name="bolumler" type="Button" parent="VBoxContainer" unique_id=1223705396]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "BÖLÜMLER"
+
+[node name="cikisbuton" type="Button" parent="VBoxContainer" unique_id=351326488]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "ÇIKIŞ"
+
+[node name="AyarlarPaneli" type="Panel" parent="." unique_id=1320393052]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kivf")
+
+[node name="baslikLabel" type="Label" parent="AyarlarPaneli" unique_id=1417664592]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.0
+offset_right = 66.0
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "AYARLAR"
+
+[node name="genelSes" type="Label" parent="AyarlarPaneli" unique_id=794338514]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 86.0
+offset_right = 134.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 25
+text = "Genel Ses"
+
+[node name="HSlider" type="HSlider" parent="AyarlarPaneli" unique_id=1614772210]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 0
+offset_left = 163.0
+offset_top = 97.0
+offset_right = 171.0
+offset_bottom = 113.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="kapatButonu" type="Button" parent="AyarlarPaneli" unique_id=122807810]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -50.0
+offset_right = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "KAPAT"
+
+[node name="BolumlerPaneli" type="Panel" parent="." unique_id=808906183]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -228.0
+offset_right = 339.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_osdsj")
+
+[node name="BaslikLabel" type="Label" parent="BolumlerPaneli" unique_id=1366766348]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.5
+offset_top = 23.0
+offset_right = 126.5
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "BÖLÜM SEÇİMİ"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BolumlerPaneli" unique_id=1038061747]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -74.5
+offset_right = 120.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bolum1" type="Button" parent="BolumlerPaneli/HBoxContainer" unique_id=967794895]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "1"
+
+[node name="Bolum2" type="Button" parent="BolumlerPaneli/HBoxContainer" unique_id=88549173]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "2"
+
+[node name="Bolum3" type="Button" parent="BolumlerPaneli/HBoxContainer" unique_id=1063629489]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "3"
+
+[node name="KapatButonu" type="Button" parent="BolumlerPaneli" unique_id=1557723007]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_top = 15.0
+offset_right = -16.0
+offset_bottom = 62.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "X"
+
+[connection signal="pressed" from="VBoxContainer/oynabuton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ayarlarbuton" to="." method="_on_ayarlarbuton_pressed"]
+[connection signal="pressed" from="VBoxContainer/cikisbuton" to="." method="_on_cikisbuton_pressed"]
+[connection signal="value_changed" from="AyarlarPaneli/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="AyarlarPaneli/kapatButonu" to="." method="_on_kapat_butonu_pressed"]
+[connection signal="pressed" from="BolumlerPaneli/HBoxContainer/Bolum1" to="." method="_on_bolum_1_pressed"]
+[connection signal="pressed" from="BolumlerPaneli/HBoxContainer/Bolum2" to="." method="_on_bolum_2_pressed"]
+[connection signal="pressed" from="BolumlerPaneli/HBoxContainer/Bolum3" to="." method="_on_bolum_3_pressed"]
+[connection signal="pressed" from="BolumlerPaneli/KapatButonu" to="." method="_on_kapat_butonu_pressed"]

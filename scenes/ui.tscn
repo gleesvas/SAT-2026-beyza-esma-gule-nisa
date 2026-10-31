@@ -26,6 +26,19 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmshb"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfs44"]
+bg_color = Color(0.1254902, 0.14117648, 0.24705882, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
 [node name="UI" type="CanvasLayer" unique_id=353903735]
 process_mode = 3
 script = ExtResource("1_yev5y")
@@ -66,6 +79,7 @@ offset_right = 148.0
 offset_bottom = 138.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfs44")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="DuraklatPaneli" unique_id=1139873957]
 layout_mode = 1
@@ -88,6 +102,11 @@ layout_mode = 2
 text = "Devam Et
 "
 
+[node name="YenidenBaslaButonu" type="Button" parent="DuraklatPaneli/VBoxContainer" unique_id=1973352451]
+layout_mode = 2
+text = "Yeniden Başla
+"
+
 [node name="AnaMenuButonu" type="Button" parent="DuraklatPaneli/VBoxContainer" unique_id=1505824493]
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
@@ -97,3 +116,5 @@ text = "Ana Menüye Dön"
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
 text = "Çıkış Yap"
+
+[connection signal="pressed" from="DuraklatPaneli/VBoxContainer/YenidenBaslaButonu" to="." method="_on_yeniden_basla_butonu_pressed"]

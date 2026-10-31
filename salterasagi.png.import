@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c53muihvabt0v"
-path="res://.godot/imported/sartelasagi.png-6d9f40632e17cd871b9a3f34bfddd79d.ctex"
+uid="uid://d28h56y1nnf2n"
+path="res://.godot/imported/salterasagi.png-6fe5bc68aeed24a595014a953e099531.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sartelasagi.png"
-dest_files=["res://.godot/imported/sartelasagi.png-6d9f40632e17cd871b9a3f34bfddd79d.ctex"]
+source_file="res://salterasagi.png"
+dest_files=["res://.godot/imported/salterasagi.png-6fe5bc68aeed24a595014a953e099531.ctex"]
 
 [params]
 
