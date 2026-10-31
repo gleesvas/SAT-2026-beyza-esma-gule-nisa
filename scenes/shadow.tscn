@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://biudjyydtyjx7" path="res://yan.png" id="5_arb4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4hye"]
-size = Vector2(30, 38)
+size = Vector2(24, 38)
 
 [sub_resource type="Animation" id="Animation_jqplm"]
 resource_name = "new_animation"

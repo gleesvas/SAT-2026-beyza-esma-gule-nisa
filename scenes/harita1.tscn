@@ -212,13 +212,18 @@
 [ext_resource type="Texture2D" uid="uid://cobmgunixxdm5" path="res://scenes/Stone 1/Textured-Stone_01-32x32-098.png" id="210_42rm6"]
 [ext_resource type="Script" uid="uid://cv68cc3bvaivl" path="res://scenes/harita_1.gd" id="211_pv5by"]
 [ext_resource type="PackedScene" uid="uid://cc1dlmxuwpvhp" path="res://scenes/shadow.tscn" id="211_sukl7"]
-[ext_resource type="PackedScene" uid="uid://c30odemsgq6wl" path="res://scenes/ui.tscn" id="212_cwwqu"]
+[ext_resource type="Script" uid="uid://cyba0fdyjnas2" path="res://scenes/ui.gd" id="212_pdxuk"]
+[ext_resource type="Texture2D" uid="uid://tk1nk6vrjtwn" path="res://scenes/pngwing.com (6).png" id="213_6t50o"]
 [ext_resource type="PackedScene" uid="uid://biyqv4asxixng" path="res://scenes/light.tscn" id="214_eotkb"]
+[ext_resource type="Script" uid="uid://dgx7okirma7i0" path="res://scenes/duraklat_butonu.gd" id="214_nbdym"]
 [ext_resource type="Script" uid="uid://krrnc5tsqxtd" path="res://scenes/light.gd" id="215_8m5fs"]
 [ext_resource type="PackedScene" uid="uid://c28j4nimnpokd" path="res://portal.tscn" id="216_8m5fs"]
 [ext_resource type="PackedScene" uid="uid://83nd1488304w" path="res://asansor.tscn" id="216_c3103"]
-[ext_resource type="Texture2D" uid="uid://bacdkh3yboepb" path="res://isik.png" id="217_0uaun"]
+[ext_resource type="PackedScene" uid="uid://dygamj0totrhr" path="res://dusme4luk.tscn" id="220_c3103"]
 [ext_resource type="PackedScene" uid="uid://p40qdkkjmttj" path="res://salter.tscn" id="220_yfs44"]
+[ext_resource type="Script" uid="uid://803nm3jwdc2o" path="res://dusme.gd" id="221_uk3sw"]
+[ext_resource type="PackedScene" uid="uid://c6wqaf1knla6i" path="res://dusme.tscn" id="222_uk3sw"]
+[ext_resource type="PackedScene" uid="uid://bbobehf6l2f3b" path="res://elmas.tscn" id="224_6t50o"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uabmt"]
 
@@ -7452,6 +7457,41 @@ sources/207 = SubResource("TileSetAtlasSource_llaf5")
 sources/208 = SubResource("TileSetAtlasSource_p1ebn")
 sources/209 = SubResource("TileSetAtlasSource_yu6r4")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8m5fs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0uaun"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nw8bw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwwqu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c3103"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfs44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uk3sw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pdxuk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6t50o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbdym"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmshb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfs44"]
+bg_color = Color(0.1254902, 0.14117648, 0.24705882, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cwwqu"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=2014394768]
@@ -7460,79 +7500,108 @@ tile_map_data = PackedByteArray("AAD8/wIAzQAAAAgAAAD8/wMAzQAAAAgAAAD8/wQAzQAAAAg
 tile_set = SubResource("TileSet_jqplm")
 script = ExtResource("211_pv5by")
 
-[node name="UI" parent="." unique_id=353903735 instance=ExtResource("212_cwwqu")]
+[node name="UI" type="CanvasLayer" parent="." unique_id=353903735]
+process_mode = 3
+script = ExtResource("212_pdxuk")
+
+[node name="DuraklatButonu" type="Button" parent="UI" unique_id=1763626094]
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 63.0
+offset_bottom = 66.0
+pivot_offset = Vector2(30, 30)
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+theme_override_icons/icon = ExtResource("213_6t50o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8m5fs")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_0uaun")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nw8bw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_cwwqu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_c3103")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yfs44")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uk3sw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_pdxuk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6t50o")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_nbdym")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bmshb")
+expand_icon = true
+script = ExtResource("214_nbdym")
+
+[node name="DuraklatPaneli" type="Panel" parent="UI" unique_id=1019991830]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -138.0
+offset_right = 148.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yfs44")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/DuraklatPaneli" unique_id=1139873957]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.5
+offset_top = -50.5
+offset_right = 70.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="DevamEtButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=999938583]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Devam Et
+"
+
+[node name="YenidenBaslaButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=1973352451]
+layout_mode = 2
+text = "Yeniden Başla
+"
+
+[node name="AnaMenuButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=1505824493]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Ana Menüye Dön"
+
+[node name="CikisButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=1269477385]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Çıkış Yap"
+
+[node name="LevelLabel" type="Label" parent="UI" unique_id=1798365732]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -191.0
+offset_top = -65.0
+offset_right = -63.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "LEVEL 1"
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="Portal" parent="." unique_id=1449139467 instance=ExtResource("216_8m5fs")]
 position = Vector2(993, -254)
-
-[node name="Isik" type="Sprite2D" parent="." unique_id=326436938]
-position = Vector2(33, -294)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik3" type="Sprite2D" parent="." unique_id=1250187722]
-position = Vector2(434, -296)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik5" type="Sprite2D" parent="." unique_id=946734971]
-position = Vector2(156, -88)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik6" type="Sprite2D" parent="." unique_id=681699813]
-position = Vector2(346, -24)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik7" type="Sprite2D" parent="." unique_id=46504604]
-position = Vector2(628, -22)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik8" type="Sprite2D" parent="." unique_id=1987554957]
-position = Vector2(46, 136)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik9" type="Sprite2D" parent="." unique_id=809385497]
-position = Vector2(346, 122)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik10" type="Sprite2D" parent="." unique_id=885226174]
-position = Vector2(619, 122)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik11" type="Sprite2D" parent="." unique_id=183592746]
-position = Vector2(851, 121)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik12" type="Sprite2D" parent="." unique_id=2127054509]
-position = Vector2(860, -22)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik13" type="Sprite2D" parent="." unique_id=1710701635]
-position = Vector2(1003, 25)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik15" type="Sprite2D" parent="." unique_id=634298893]
-position = Vector2(690, -296)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik16" type="Sprite2D" parent="." unique_id=461996428]
-position = Vector2(557, -296)
-texture = ExtResource("217_0uaun")
 
 [node name="Sartelasagi" type="Sprite2D" parent="." unique_id=160693905]
 position = Vector2(183.75, -30.875008)
 scale = Vector2(0.59000015, 0.6277781)
 texture = SubResource("CompressedTexture2D_cwwqu")
-
-[node name="Isik2" type="Sprite2D" parent="." unique_id=1773018446]
-position = Vector2(995, -294)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik4" type="Sprite2D" parent="." unique_id=143641466]
-position = Vector2(852, -295)
-texture = ExtResource("217_0uaun")
-
-[node name="Isik14" type="Sprite2D" parent="." unique_id=1614453515]
-position = Vector2(228, -294)
-texture = ExtResource("217_0uaun")
 
 [node name="Sartelasagi2" type="Sprite2D" parent="." unique_id=616143919]
 position = Vector2(816, -239)
@@ -7543,19 +7612,15 @@ position = Vector2(256.00003, -255)
 scale = Vector2(0.66, 0.7)
 
 [node name="Asansor" parent="." unique_id=1938578459 instance=ExtResource("216_c3103")]
-position = Vector2(55, -26)
-move_offset = Vector2(0, -200)
+position = Vector2(55, -11)
+move_offset = Vector2(0, -221)
 
 [node name="salter" parent="." unique_id=514298822 node_paths=PackedStringArray("target_asansor") instance=ExtResource("220_yfs44")]
 position = Vector2(-12, -32)
 target_asansor = NodePath("../Asansor")
 
-[node name="Shadow" parent="." unique_id=1379353057 instance=ExtResource("211_sukl7")]
-z_index = 2
-position = Vector2(48, 65)
-
 [node name="Light" parent="." unique_id=412803545 instance=ExtResource("214_eotkb")]
-position = Vector2(46, 174)
+position = Vector2(1, 175)
 script = ExtResource("215_8m5fs")
 
 [node name="salteryan" parent="." unique_id=1034786551 node_paths=PackedStringArray("target_asansor") instance=ExtResource("220_yfs44")]
@@ -7565,3 +7630,131 @@ target_asansor = NodePath("../Asansoryan")
 [node name="Asansoryan" parent="." unique_id=1507123053 instance=ExtResource("216_c3103")]
 position = Vector2(376, -218)
 move_offset = Vector2(350, 0)
+
+[node name="dusme4luk" parent="." unique_id=79979222 instance=ExtResource("220_c3103")]
+position = Vector2(480, 200)
+script = ExtResource("221_uk3sw")
+
+[node name="dusme4luk2" parent="." unique_id=961379868 instance=ExtResource("220_c3103")]
+position = Vector2(768, 200)
+script = ExtResource("221_uk3sw")
+
+[node name="Dusme" parent="." unique_id=1092511413 instance=ExtResource("222_uk3sw")]
+position = Vector2(413, -153)
+
+[node name="Dusme2" parent="." unique_id=312285009 instance=ExtResource("222_uk3sw")]
+position = Vector2(541, -153)
+
+[node name="Dusme3" parent="." unique_id=1088495606 instance=ExtResource("222_uk3sw")]
+position = Vector2(669, -153)
+
+[node name="Shadow" parent="." unique_id=1379353057 instance=ExtResource("211_sukl7")]
+z_index = 2
+position = Vector2(-1, 67)
+
+[node name="Elmas" parent="." unique_id=1762420904 instance=ExtResource("224_6t50o")]
+position = Vector2(480, 144)
+
+[node name="Elmas2" parent="." unique_id=2030312600 instance=ExtResource("224_6t50o")]
+position = Vector2(768, 144)
+
+[node name="Elmas3" parent="." unique_id=298860888 instance=ExtResource("224_6t50o")]
+position = Vector2(768, 16)
+
+[node name="Elmas4" parent="." unique_id=1226451053 instance=ExtResource("224_6t50o")]
+position = Vector2(478, 17)
+
+[node name="Elmas5" parent="." unique_id=1204183071 instance=ExtResource("224_6t50o")]
+position = Vector2(481, -119)
+
+[node name="Elmas6" parent="." unique_id=1237279480 instance=ExtResource("224_6t50o")]
+position = Vector2(768, -120)
+
+[node name="Elmas7" parent="." unique_id=394366454 instance=ExtResource("224_6t50o")]
+position = Vector2(992, -95)
+
+[node name="Elmas8" parent="." unique_id=1615630142 instance=ExtResource("224_6t50o")]
+position = Vector2(839, -239)
+
+[node name="Elmas9" parent="." unique_id=875133460 instance=ExtResource("224_6t50o")]
+position = Vector2(143, -32)
+
+[node name="Elmas10" parent="." unique_id=88363439 instance=ExtResource("224_6t50o")]
+position = Vector2(342, 49)
+
+[node name="Elmas11" parent="." unique_id=661656121 instance=ExtResource("224_6t50o")]
+position = Vector2(343, -95)
+
+[node name="Elmas12" parent="." unique_id=588898959 instance=ExtResource("224_6t50o")]
+position = Vector2(121, -159)
+
+[node name="Elmas13" parent="." unique_id=123343349 instance=ExtResource("224_6t50o")]
+position = Vector2(199, -159)
+
+[node name="Elmas14" parent="." unique_id=288543728 instance=ExtResource("224_6t50o")]
+position = Vector2(120, -255)
+
+[node name="Elmas15" parent="." unique_id=1835162378 instance=ExtResource("224_6t50o")]
+position = Vector2(248, -254)
+
+[node name="Elmas16" parent="." unique_id=1323925380 instance=ExtResource("224_6t50o")]
+position = Vector2(104, 65)
+
+[node name="Elmas17" parent="." unique_id=1475513613 instance=ExtResource("224_6t50o")]
+position = Vector2(103, 177)
+
+[node name="Elmas18" parent="." unique_id=451097745 instance=ExtResource("224_6t50o")]
+position = Vector2(343, 177)
+
+[node name="Elmas19" parent="." unique_id=1068114622 instance=ExtResource("224_6t50o")]
+position = Vector2(246, 178)
+
+[node name="Elmas20" parent="." unique_id=960176595 instance=ExtResource("224_6t50o")]
+position = Vector2(624, 178)
+
+[node name="Elmas21" parent="." unique_id=917255997 instance=ExtResource("224_6t50o")]
+position = Vector2(872, 179)
+
+[node name="Elmas22" parent="." unique_id=1123737953 instance=ExtResource("224_6t50o")]
+position = Vector2(999, 80)
+
+[node name="Elmas23" parent="." unique_id=741825755 instance=ExtResource("224_6t50o")]
+position = Vector2(848, 50)
+
+[node name="Elmas24" parent="." unique_id=464040945 instance=ExtResource("224_6t50o")]
+position = Vector2(568, 49)
+
+[node name="Elmas25" parent="." unique_id=66152131 instance=ExtResource("224_6t50o")]
+position = Vector2(663, 49)
+
+[node name="Elmas26" parent="." unique_id=836894465 instance=ExtResource("224_6t50o")]
+position = Vector2(568, -94)
+
+[node name="Elmas27" parent="." unique_id=934183465 instance=ExtResource("224_6t50o")]
+position = Vector2(665, -93)
+
+[node name="Elmas28" parent="." unique_id=783756026 instance=ExtResource("224_6t50o")]
+position = Vector2(55, -32)
+
+[node name="Elmas29" parent="." unique_id=344487746 instance=ExtResource("224_6t50o")]
+position = Vector2(55, -112)
+
+[node name="Elmas30" parent="." unique_id=974987421 instance=ExtResource("224_6t50o")]
+position = Vector2(55, -223)
+
+[node name="Elmas31" parent="." unique_id=786856088 instance=ExtResource("224_6t50o")]
+position = Vector2(376, -248)
+
+[node name="Elmas32" parent="." unique_id=1281691296 instance=ExtResource("224_6t50o")]
+position = Vector2(487, -247)
+
+[node name="Elmas33" parent="." unique_id=297902543 instance=ExtResource("224_6t50o")]
+position = Vector2(743, -247)
+
+[node name="Elmas34" parent="." unique_id=2123806039 instance=ExtResource("224_6t50o")]
+position = Vector2(632, -247)
+
+[node name="Elmas35" parent="." unique_id=1850601485 instance=ExtResource("224_6t50o")]
+position = Vector2(560, -247)
+
+[connection signal="pressed" from="UI/DuraklatPaneli/VBoxContainer/YenidenBaslaButonu" to="UI" method="_on_yeniden_basla_butonu_pressed"]

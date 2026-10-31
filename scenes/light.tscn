@@ -37,7 +37,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="Rect_body"]
-size = Vector2(23, 38)
+size = Vector2(18, 39)
 
 [node name="Light" type="CharacterBody2D" unique_id=412803545]
 
@@ -49,5 +49,5 @@ sprite_frames = SubResource("SpriteFrames_light")
 animation = &"yurume"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=587791480]
-position = Vector2(-1.5, -3)
+position = Vector2(-2, -2.5)
 shape = SubResource("Rect_body")

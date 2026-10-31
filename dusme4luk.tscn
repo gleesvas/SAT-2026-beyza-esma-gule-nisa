@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dygamj0totrhr"]
+
+[ext_resource type="Texture2D" uid="uid://dicdmgt08pw85" path="res://scenes/düsme.png" id="1_aftpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qirbi"]
+size = Vector2(63.5, 18)
+
+[node name="dusme4luk" type="Area2D" unique_id=79979222]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1304819183]
+scale = Vector2(0.127, 0.26666665)
+texture = ExtResource("1_aftpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1702048564]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_qirbi")

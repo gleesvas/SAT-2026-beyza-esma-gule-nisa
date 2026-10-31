@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dqu4k0db1n6up" path="res://scenes/anamenuu.gd" id="1_5kivf"]
 [ext_resource type="Texture2D" uid="uid://bxtnhapteqx46" path="res://uzayarkaplan.jpeg" id="2_5kivf"]
-[ext_resource type="Texture2D" uid="uid://bkt1lw5ltpokl" path="res://scenes/karakterler1.png" id="3_tuc87"]
-[ext_resource type="Texture2D" uid="uid://c7yedqp3fwshw" path="res://Shadow.png" id="4_5fp0f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuc87"]
 bg_color = Color(0.12707144, 0.14262787, 0.24601954, 1)
@@ -48,16 +46,6 @@ grow_vertical = 2
 texture = ExtResource("2_5kivf")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="Karakterler1" type="Sprite2D" parent="." unique_id=467688787]
-position = Vector2(173, 499.00003)
-scale = Vector2(20.975, 17.4625)
-texture = ExtResource("3_tuc87")
-
-[node name="Shadow" type="Sprite2D" parent="." unique_id=65666139]
-position = Vector2(941.5, 517.50006)
-scale = Vector2(15.15625, 15.843749)
-texture = ExtResource("4_5fp0f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1575744736]
 layout_mode = 1

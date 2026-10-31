@@ -30,12 +30,18 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _check_level_complete() -> void:
 	var total_players := get_tree().get_nodes_in_group("players").size()
-	print("Sahnedeki Toplam Oyuncu: ", total_players, " | Portaldakiler: ", players_in_portal.size())
+	var remaining_diamonds := get_tree().get_nodes_in_group("elmaslar").size()
 	
-	# İki oyuncu da portala girdiyse sonraki haritaya geç
+	print("Sahnedeki Toplam Oyuncu: ", total_players, " | Portaldakiler: ", players_in_portal.size())
+	print("Kalan Elmas Sayısı: ", remaining_diamonds)
+	
+	# Hem tüm oyuncular portala girmiş olmalı hem de hiç elmas kalmamış olmalı
 	if players_in_portal.size() >= total_players and total_players > 0:
-		print("GEÇİŞ BAŞARILI: Harita 2'ye geçiliyor...")
-		call_deferred("_change_scene")
+		if remaining_diamonds == 0:
+			print("GEÇİŞ BAŞARILI: Sonraki haritaya geçiliyor...")
+			call_deferred("_change_scene")
+		else:
+			print("GEÇİŞ ENGELLENDİ: Toplanması gereken ", remaining_diamonds, " elmas daha var!")
 
 
 func _change_scene() -> void:

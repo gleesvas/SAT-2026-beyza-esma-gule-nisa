@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bbobehf6l2f3b"]
+
+[ext_resource type="Texture2D" uid="uid://crjn84h5j4bom" path="res://morelmas.png" id="1_4y3ch"]
+[ext_resource type="Script" uid="uid://yg31pxb5gym4" path="res://elmas.gd" id="1_lavqh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qirbi"]
+radius = 8.0
+
+[node name="Elmas" type="Area2D" unique_id=1762420904]
+script = ExtResource("1_lavqh")
+suzulme_mesafesi = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=662887947]
+scale = Vector2(2.2333333, 2.382353)
+texture = ExtResource("1_4y3ch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=517289288]
+shape = SubResource("CircleShape2D_qirbi")
