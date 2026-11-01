@@ -15,11 +15,16 @@ run/main_scene="uid://b46tn7v4p3ona"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ImlecYonetici="*uid://bip8mvovfevki"
+
 [display]
 
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://qla7st8483cl"
 
 [input]
 

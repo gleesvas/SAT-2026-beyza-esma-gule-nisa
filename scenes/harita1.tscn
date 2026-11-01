@@ -7492,6 +7492,102 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 corner_detail = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kivf"]
+bg_color = Color(0.08235294, 0.043137256, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yev5y"]
+bg_color = Color(0.15686275, 0.09411765, 0.3647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osdsj"]
+bg_color = Color(0.08235294, 0.043137256, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3ai"]
+bg_color = Color(0.15686275, 0.09411765, 0.3647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fp0f"]
+bg_color = Color(0.08235294, 0.043137256, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dubc"]
+bg_color = Color(0.15686275, 0.09411765, 0.3647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4xj2"]
+bg_color = Color(0.08235294, 0.043137256, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7vwb"]
+bg_color = Color(0.15686275, 0.09411765, 0.3647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.43529412, 0.64705884, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cwwqu"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=2014394768]
@@ -7510,7 +7606,6 @@ offset_top = 6.0
 offset_right = 63.0
 offset_bottom = 66.0
 pivot_offset = Vector2(30, 30)
-mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 30
 theme_override_icons/icon = ExtResource("213_6t50o")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8m5fs")
@@ -7560,40 +7655,32 @@ theme_override_constants/separation = 10
 [node name="DevamEtButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=999938583]
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kivf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yev5y")
 text = "Devam Et
 "
 
 [node name="YenidenBaslaButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=1973352451]
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_osdsj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wm3ai")
 text = "Yeniden Başla
 "
 
 [node name="AnaMenuButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=1505824493]
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5fp0f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8dubc")
 text = "Ana Menüye Dön"
 
 [node name="CikisButonu" type="Button" parent="UI/DuraklatPaneli/VBoxContainer" unique_id=1269477385]
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_l4xj2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p7vwb")
 text = "Çıkış Yap"
-
-[node name="LevelLabel" type="Label" parent="UI" unique_id=1798365732]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -191.0
-offset_top = -65.0
-offset_right = -63.0
-offset_bottom = -16.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 35
-text = "LEVEL 1"
-horizontal_alignment = 2
-vertical_alignment = 2
 
 [node name="Portal" parent="." unique_id=1449139467 instance=ExtResource("216_8m5fs")]
 position = Vector2(993, -254)
